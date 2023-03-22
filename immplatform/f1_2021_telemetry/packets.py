@@ -1,16 +1,3 @@
-# uncompyle6 version 3.5.0
-# Python bytecode 3.6 (3379)
-# Decompiled from: Python 2.7.5 (default, Nov 16 2020, 22:23:17) 
-# [GCC 4.8.5 20150623 (Red Hat 4.8.5-44)]
-# Embedded file name: f1_2021_telemetry\packets.py
-# Compiled at: 1995-09-28 00:18:56
-# Size of source mod 2**32: 257 bytes
-"""
-The hard work for this file was taken from here:
-https://forums.codemasters.com/topic/
-80231-f1-2021-udp-specification/?do=findComment&comment=624274
-
-"""
 import ctypes, enum
 from typing import Dict
 
