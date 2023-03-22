@@ -1,24 +1,3 @@
-# uncompyle6 version 3.7.4
-# Python bytecode 3.6 (3379)
-# Decompiled from: Python 3.7.9 (tags/v3.7.9:13c94747c7, Aug 17 2020, 18:58:18) [MSC v.1900 64 bit (AMD64)]
-# Embedded file name: f1_2020_telemetry\packets.py
-# Compiled at: 1995-09-28 00:18:56
-# Size of source mod 2**32: 257 bytes
-"""F1 2020 UDP Telemetry support package
-
-This package is based on the CodeMasters Forum post documenting the F1 2020 packet format:
-
-    https://forums.codemasters.com/topic/54423-f1%C2%AE-2020-udp-specification/
-
-Compared to the definitions given there, the Python version has the following changes:
-
-(1) In the 'PacketMotionData' structure, the comments for the three m_angularAcceleration{X,Y,Z} fields erroneously
-    refer to 'velocity' rather than 'acceleration'. This was corrected.
-(2) In the 'CarSetupData' structure, the comment of the m_rearAntiRollBar refer to rear instead of front. This was corrected.
-(3) In the Driver IDs table, driver 34 has name "Wilheim Kaufmann".
-    This is a typo; whenever this driver is encountered in the game, his name is given as "Wilhelm Kaufmann".
-(4) In the 'CarStatusData' structure, tyreVisualCompound was renamed to visualTyreCompound.
-"""
 import ctypes, enum
 from typing import Dict
 
@@ -800,4 +779,3 @@ def unpack_udp_packet(packet: bytes) -> PackedLittleEndianStructure:
     if actual_packet_size != expected_packet_size:
         raise UnpackError('Bad telemetry packet: bad size for {} packet; expected {} bytes but received {} bytes.'.format(packet_type.__name__, expected_packet_size, actual_packet_size))
     return packet_type.from_buffer_copy(packet)
-# okay decompiling C:\Users\10439\Desktop\pyinstxtractor-2023.02\f1_2020_telemetry.packets.pyc
