@@ -1,9 +1,3 @@
-# uncompyle6 version 3.7.4
-# Python bytecode 3.6 (3379)
-# Decompiled from: Python 3.7.9 (tags/v3.7.9:13c94747c7, Aug 17 2020, 18:58:18) [MSC v.1900 64 bit (AMD64)]
-# Embedded file name: axis_ui.py
-# Compiled at: 1995-09-28 00:18:56
-# Size of source mod 2**32: 257 bytes
 from PyQt5.QtCore import *
 from PyQt5.QtWidgets import *
 from PyQt5.QtCore import QTimer
@@ -42,4 +36,3 @@ class AxisChooser(Utiliy):
             self.main.A5_progressBar.setValue(rz)
             self.main.A6_progressBar.setValue(slider)
             self.main.A7_progressBar.setValue(slider2)
-# okay decompiling C:\Users\10439\Desktop\pyinstxtractor-2023.02\axis_ui.pyc
